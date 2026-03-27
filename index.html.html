@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Lumio Together</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0b18;
+      --surface: #13101f;
+      --accent1: #b57bee;
+      --accent2: #f0a76b;
+      --text: #ede9f8;
+      --muted: #8b82a8;
+      --border: rgba(181,123,238,0.15);
+      --radius: 14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse, rgba(181,123,238,0.1) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 64px 24px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px; height: 72px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #1e1535, #2a1d4a);
+      border: 1px solid rgba(181,123,238,0.35);
+      box-shadow: 0 0 32px rgba(181,123,238,0.25), inset 0 1px 0 rgba(255,255,255,0.06);
+      margin: 0 auto 22px;
+    }
+
+    .logo-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--accent2), var(--accent1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 8px rgba(181,123,238,0.6));
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 600;
+      background: linear-gradient(135deg, #ede9f8 30%, var(--accent1));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+
+    .header-meta { color: var(--muted); font-size: 0.88rem; letter-spacing: 0.06em; text-transform: uppercase; }
+
+    .pill {
+      display: inline-block;
+      background: rgba(181,123,238,0.1);
+      border: 1px solid rgba(181,123,238,0.25);
+      color: var(--accent1);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-top: 14px;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      background: linear-gradient(135deg, rgba(181,123,238,0.08), rgba(240,167,107,0.06));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 36px;
+      font-size: 0.97rem;
+      color: #c8c0e0;
+      line-height: 1.85;
+    }
+
+    .intro strong { color: var(--accent1); font-weight: 500; }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-bottom: 20px;
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .icon-box {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(181,123,238,0.1);
+      border: 1px solid rgba(181,123,238,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    p { font-size: 0.95rem; color: #b8b0d0; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { padding-left: 0; list-style: none; margin-bottom: 12px; }
+    li { font-size: 0.95rem; color: #b8b0d0; padding: 5px 0 5px 22px; position: relative; }
+    li::before { content: '›'; position: absolute; left: 6px; color: var(--accent1); font-size: 1.1rem; }
+    strong { color: #d4cce8; font-weight: 500; }
+
+    .note-box {
+      background: rgba(240,167,107,0.07);
+      border-left: 2px solid var(--accent2);
+      border-radius: 0 8px 8px 0;
+      padding: 12px 18px;
+      margin: 14px 0;
+      font-size: 0.9rem;
+      color: #c4a880;
+    }
+
+    .good-box {
+      background: rgba(100,220,140,0.05);
+      border-left: 2px solid #64dc8c;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 18px;
+      margin: 14px 0;
+      font-size: 0.9rem;
+      color: #8dd4a8;
+    }
+
+    .sdk-table { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 0.9rem; }
+    .sdk-table th { text-align: left; color: var(--muted); font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.75rem; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+    .sdk-table td { padding: 10px 12px; color: #b8b0d0; border-bottom: 1px solid rgba(181,123,238,0.07); vertical-align: top; }
+    .sdk-table tr:last-child td { border-bottom: none; }
+    .sdk-table td:first-child { color: var(--accent1); }
+
+    .contact-card {
+      background: linear-gradient(135deg, rgba(181,123,238,0.1), rgba(240,167,107,0.08));
+      border: 1px solid rgba(181,123,238,0.25);
+      border-radius: var(--radius);
+      padding: 36px;
+      text-align: center;
+      margin-top: 32px;
+    }
+
+    .contact-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 14px; }
+    .contact-card a { color: var(--accent1); text-decoration: none; }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 48px;
+      padding-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 22px 18px; }
+      header h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap"><span class="logo-letter">L</span></div>
+  <h1>Lumio Together</h1>
+  <div class="header-meta">Privacy Policy &nbsp;·&nbsp; Last updated: March 27, 2026</div>
+  <div class="pill">For Couples · 18+ App</div>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    <strong>Lumio Together</strong> is a private couple connectivity app — designed exclusively for two paired partners.
+    It is not a social network, not a public platform, and your data is never shared with advertisers or other users.
+    This policy explains exactly what we collect, why, and how it is protected.
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🌙</div><h2>Who We Are</h2></div>
+    <p>Lumio Together is a private couple app for Android and iOS, designed for adults in romantic relationships. The app pairs exactly two users via a unique 6-character invite code and provides a fully private shared space — it is non-functional without a confirmed partner pairing.</p>
+    <div class="note-box">⚠️ Lumio Together is intended for users aged <strong>18 and older</strong> due to its intimate relationship content including mood sharing, menstrual cycle tracking, and romantic date planning.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">📦</div><h2>Information We Collect</h2></div>
+    <p><strong>From your sign-in provider (Google or Apple):</strong></p>
+    <ul>
+      <li>Email address</li>
+      <li>Display name</li>
+      <li>Profile photo URL (if available)</li>
+    </ul>
+    <p><strong>During setup and pairing:</strong></p>
+    <ul>
+      <li>Gender (male / female / prefer not to say)</li>
+      <li>Firebase Cloud Messaging token (for push notifications)</li>
+      <li>6-character invite code (auto-generated)</li>
+      <li>Timestamps (account creation, last seen)</li>
+    </ul>
+    <p><strong>Optionally provided by you:</strong></p>
+    <ul>
+      <li>Custom avatar photo (from your photo library)</li>
+      <li>Partner nickname, city, anniversary date</li>
+      <li>Menstrual cycle data — only if you choose to enable and share it</li>
+    </ul>
+    <p><strong>User-generated content (private to your couple):</strong></p>
+    <ul>
+      <li>Chat messages (text)</li>
+      <li>Scrapbook photos and voice notes</li>
+      <li>Mood entries, daily challenge answers</li>
+      <li>Grocery, errand, wishlist, and bucket list items</li>
+      <li>Game responses (trivia, Would You Rather, etc.)</li>
+    </ul>
+    <div class="good-box">✅ All content is strictly private to your couple. Nothing is publicly visible or shared with any other user.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🩺</div><h2>Sensitive Health Data</h2></div>
+    <p>Lumio Together includes an optional menstrual cycle and health tracking feature. This is sensitive health information and is handled with the highest care:</p>
+    <ul>
+      <li>Entirely <strong>opt-in</strong> — disabled by default</li>
+      <li>A <strong>Share With Partner</strong> toggle controls whether your partner can see this data</li>
+      <li>If sharing is off, data is visible to you only</li>
+      <li>Stored in your private Firebase Firestore couple database — never shared with any third party</li>
+      <li>Can be deleted at any time from within the app or by deleting your account</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">📷</div><h2>Camera, Microphone &amp; Photo Library</h2></div>
+    <p><strong>Photo Library:</strong> Used to select your avatar photo and add images to your shared scrapbook. Images are stored privately within your couple's data.</p>
+    <p><strong>Microphone:</strong> Used to record voice notes in the scrapbook. Audio is stored privately within your couple's space.</p>
+    <div class="good-box">✅ The app does not make video calls, voice calls, or live camera streams. No media is ever uploaded publicly.</div>
+    <p><strong>Permissions declared:</strong></p>
+    <ul>
+      <li>Android: CAMERA, RECORD_AUDIO, READ_EXTERNAL_STORAGE</li>
+      <li>iOS: NSCameraUsageDescription, NSPhotoLibraryUsageDescription, NSMicrophoneUsageDescription</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">📍</div><h2>Location Data</h2></div>
+    <div class="good-box">✅ Lumio Together does not access your GPS or location at any time. No location permissions are requested or used.</div>
+    <p>The "Walk Together" feature uses your device's pedometer (step sensor) only — not GPS — to sync step counts between partners.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🔔</div><h2>Push Notifications</h2></div>
+    <p>We use Firebase Cloud Messaging (FCM) and Notifee to send push notifications. You may receive notifications for:</p>
+    <ul>
+      <li>Partner answering the daily challenge</li>
+      <li>Partner sending a virtual gift or cuddle</li>
+      <li>Partner starting a Together activity (movie, walk, study session)</li>
+      <li>Dinner date reminders</li>
+      <li>Streak warnings (when your daily streak is about to expire)</li>
+    </ul>
+    <p>You can manage or disable notifications at any time through your device settings.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">💎</div><h2>Virtual Currency (LBPoints)</h2></div>
+    <p>Lumio Together uses a virtual in-app currency called <strong>LBPoints</strong>, earned by using the app (completing challenges, maintaining streaks, hourly usage). LBPoints are spent on virtual gifts sent to your partner.</p>
+    <div class="good-box">✅ There are no real-money purchases, no subscriptions, no Apple IAP, and no Google Play Billing. No payment or financial data is ever collected.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🔧</div><h2>Third-Party Services &amp; SDKs</h2></div>
+    <p>We use the following services to operate the app. No analytics, ad networks, or data brokers are used.</p>
+    <table class="sdk-table">
+      <thead><tr><th>Service</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Firebase Auth</td><td>User authentication</td></tr>
+        <tr><td>Firebase Firestore</td><td>Private couple database (messages, moods, lists, etc.)</td></tr>
+        <tr><td>Firebase Cloud Messaging</td><td>Push notifications</td></tr>
+        <tr><td>Firebase Storage</td><td>File storage (minimal use)</td></tr>
+        <tr><td>Google Sign-In</td><td>Login via Google account</td></tr>
+        <tr><td>Apple Authentication</td><td>Login via Apple (iOS only)</td></tr>
+        <tr><td>Notifee</td><td>Local notification scheduling</td></tr>
+        <tr><td>Expo SDK</td><td>Camera, audio, sensors, image picker, fonts</td></tr>
+        <tr><td>Zustand</td><td>Client-side state management only — no external data sent</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;">All data resides within Google Firebase / Google Cloud. Your data is never sold or shared with advertising or analytics companies.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🎯</div><h2>How We Use Your Information</h2></div>
+    <ul>
+      <li>To create and manage your account and couple pairing</li>
+      <li>To deliver core features (chat, activities, games, scrapbook, shared lists)</li>
+      <li>To send push notifications related to your couple's activity</li>
+      <li>To sync shared data between you and your partner in real time</li>
+      <li>To track LBPoints balance and virtual gift history</li>
+      <li>To comply with applicable legal obligations</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🔗</div><h2>Data Sharing</h2></div>
+    <div class="good-box">✅ We do not sell your personal data. We do not share it with advertisers, marketers, or data brokers.</div>
+    <p>Data is shared only in these limited circumstances:</p>
+    <ul>
+      <li><strong>With your partner:</strong> Shared features (chat, lists, moods, scrapbook, games) are visible to your paired partner only.</li>
+      <li><strong>With Firebase/Google:</strong> As our infrastructure provider. See <a href="https://firebase.google.com/support/privacy" style="color:var(--accent1)">Firebase Privacy Policy</a>.</li>
+      <li><strong>Legal requirements:</strong> If required by law, court order, or government authority.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🗑️</div><h2>Data Retention &amp; Deletion</h2></div>
+    <p>Your data is retained while your account is active. You may request deletion of your account and all associated data at any time by contacting us.</p>
+    <ul>
+      <li>All account data, couple pairing, and user-generated content will be permanently removed</li>
+      <li>Residual data in backups may persist for up to 90 days before full deletion</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🔒</div><h2>Data Security</h2></div>
+    <ul>
+      <li>Firebase Firestore access rules restrict all reads/writes strictly to the authenticated couple</li>
+      <li>Authentication is handled via Google and Apple — we never store passwords</li>
+      <li>Data in transit is encrypted via HTTPS/TLS</li>
+      <li>No analytics or tracking SDKs have access to your data</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🔞</div><h2>Children's Privacy</h2></div>
+    <p>Lumio Together is intended exclusively for users aged <strong>18 and older</strong>. We do not knowingly collect personal information from anyone under 18. If we become aware a minor has registered, we will promptly delete their account. If you believe a minor has accessed the app, please contact us immediately.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">✅</div><h2>Your Rights</h2></div>
+    <p>Depending on your location (GDPR in the EU, PIPEDA in Canada, CCPA in California), you may have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> the personal data we hold about you</li>
+      <li><strong>Correct</strong> inaccurate or incomplete data</li>
+      <li><strong>Delete</strong> your account and all personal data</li>
+      <li><strong>Withdraw consent</strong> for optional features such as health data sharing</li>
+      <li><strong>Data portability</strong> — receive your data in a structured format</li>
+      <li><strong>Opt out</strong> of push notifications via device settings</li>
+    </ul>
+    <p>To exercise any of these rights, email us below.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="icon-box">🔄</div><h2>Changes to This Policy</h2></div>
+    <p>We may update this Privacy Policy as the app evolves. Significant changes will be communicated via push notification or in-app message. The "Last updated" date at the top of this page will always reflect the most recent revision.</p>
+    <p>Continued use of Lumio Together after changes are posted constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="contact-card">
+    <h2>📬 Contact Us</h2>
+    <p style="color:var(--muted); margin-bottom:16px;">Questions about this Privacy Policy or your data? We aim to respond within 7 business days.</p>
+    <p style="color:var(--text); font-size:1rem; margin-bottom:6px;"><strong>Lumio Together</strong></p>
+    <p style="margin-bottom:0;"><a href="mailto:tarunjits99@gmail.com">tarunjits99@gmail.com</a></p>
+  </div>
+
+  <footer>
+    <p>© 2026 Lumio Together. All rights reserved.</p>
+    <p style="margin-top:6px; opacity:0.5;">This page is publicly accessible, requires no login, and does not auto-download any file.</p>
+  </footer>
+
+</div>
+</body>
+</html>
